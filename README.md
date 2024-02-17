@@ -10,6 +10,14 @@ This makes handwritten notes  easy to navigate when need to reffer it. Check [AI
 <img src="./media/example_notestree.png" alt="Example NotesTree" width="400"/>
 </p>
 
+## Install
+```bash
+git clone https://github.com/aditya-shriwastava/NotesTree.git
+cd NotesTree
+./install.py
+# ./uninstall.py to uninstall
+```
+
 ## Description
 * A node in a NotesTree is stored as directory on disk.
 * Every node will have have following:
