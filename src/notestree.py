@@ -294,7 +294,7 @@ class Layout:
     def __init__(self, file_path):
         try:
             fd = open(file_path, "r")
-            layout = yaml.load(fd.read())
+            layout = yaml.safe_load(fd)
             self.ordered = layout["Ordered"]
             self.order = layout["Order"]
             fd.close()
@@ -330,7 +330,7 @@ class Index:
         self.hand_written_notes = self.ParseHandWrittenNotes()
     def ParseLayout(self):
         fd = open(self.path + "/.layout", "r")
-        layout = yaml.load(fd.read())
+        layout = yaml.safe_load(fd)
         ordered = layout["Ordered"]
         order = layout["Order"]
         fd.close()
